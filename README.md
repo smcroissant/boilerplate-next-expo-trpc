@@ -1,84 +1,133 @@
-# Turborepo starter
+# Next.js 15 + tRPC Monorepo Boilerplate
 
-This Turborepo starter is maintained by the Turborepo core team.
+A modern, full-stack TypeScript monorepo boilerplate featuring Next.js 15 with App Router, tRPC for type-safe APIs, and a React Native mobile app. Built with Turborepo for efficient workspace management.
 
-## Using this example
+## Features
 
-Run the following command:
+- 🏗️ **Monorepo Structure**: Organized with Turborepo for optimal workspace management
+- ⚡ **Next.js 15**: Utilizing the latest App Router and React Server Components
+- 🔄 **tRPC**: End-to-end type-safe APIs shared between web and mobile
+- 📱 **React Native**: Mobile app setup with shared API layer
+- 🎨 **UI Package**: Shared components between web and mobile
+- 🔧 **Type Safety**: Strict TypeScript configuration across all packages
 
-```sh
-npx create-turbo@latest
-```
-
-## What's inside?
-
-This Turborepo includes the following packages/apps:
-
-### Apps and Packages
-
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
-
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Utilities
-
-This Turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-
-### Build
-
-To build all apps and packages, run the following command:
+## Project Structure
 
 ```
-cd my-turborepo
-pnpm build
+├── apps/
+│   ├── web/                 # Next.js 15 application
+│   │   ├── src/
+│   │   │   ├── app/        # Next.js App Router pages
+│   │   │   └── trpc/       # tRPC client setup
+│   │   └── ...
+│   └── mobile/             # React Native application
+│       ├── app/
+│       └── trpc/           # tRPC client setup
+├── packages/
+│   ├── trpc/               # Shared tRPC routers
+│   ├── ui/                 # Shared UI components
+│   ├── eslint-config/      # Shared ESLint configurations
+│   └── typescript-config/  # Shared TypeScript configurations
 ```
 
-### Develop
+## Getting Started
 
-To develop all apps and packages, run the following command:
+### Prerequisites
 
-```
-cd my-turborepo
-pnpm dev
-```
+- Node.js 18+
+- pnpm (recommended) or npm
 
-### Remote Caching
+### Installation
 
-> [!TIP]
-> Vercel Remote Cache is free for all plans. Get started today at [vercel.com](https://vercel.com/signup?/signup?utm_source=remote-cache-sdk&utm_campaign=free_remote_cache).
-
-Turborepo can use a technique known as [Remote Caching](https://turborepo.com/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup?utm_source=turborepo-examples), then enter the following commands:
-
-```
-cd my-turborepo
-npx turbo login
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd <repository-name>
 ```
 
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
-
-```
-npx turbo link
+2. Install dependencies:
+```bash
+pnpm install
 ```
 
-## Useful Links
+3. Set up environment variables:
 
-Learn more about the power of Turborepo:
+Create `.env` files in both web and mobile applications:
 
-- [Tasks](https://turborepo.com/docs/crafting-your-repository/running-tasks)
-- [Caching](https://turborepo.com/docs/crafting-your-repository/caching)
-- [Remote Caching](https://turborepo.com/docs/core-concepts/remote-caching)
-- [Filtering](https://turborepo.com/docs/crafting-your-repository/running-tasks#using-filters)
-- [Configuration Options](https://turborepo.com/docs/reference/configuration)
-- [CLI Usage](https://turborepo.com/docs/reference/command-line-reference)
+**For web (`apps/web/.env`):**
+```env
+NEXT_PUBLIC_API_URL=http://localhost:3000
+# Add other web-specific environment variables
+```
+
+**For mobile (`apps/mobile/.env`):**
+```env
+API_URL=http://localhost:3000
+# Add other mobile-specific environment variables
+```
+
+4. Start the development servers:
+
+- For web application:
+```bash
+pnpm --filter web dev
+```
+
+- For mobile application:
+```bash
+pnpm --filter mobile dev
+```
+
+## Available Scripts
+
+- `pnpm build`: Build all applications and packages
+- `pnpm dev`: Start all applications in development mode
+- `pnpm lint`: Run ESLint across all projects
+- `pnpm type-check`: Run TypeScript type checking
+
+## Package Overview
+
+### Web Application (`apps/web`)
+- Next.js 15 with App Router
+- tRPC client integration
+- Server and Client Components examples
+- TailwindCSS for styling
+
+### Mobile Application (`apps/mobile`)
+- React Native with Expo
+- tRPC client integration
+- Shared API layer with web
+
+### tRPC Package (`packages/trpc`)
+- Shared API routes and procedures
+- Type-safe API layer
+- Example routers included
+
+### UI Package (`packages/ui`)
+- Shared React components
+- Platform-agnostic design
+- TypeScript strict mode
+
+## Development Workflow
+
+1. Define your API routes in `packages/trpc/src/routers`
+2. Create shared UI components in `packages/ui/src`
+3. Implement web features in `apps/web/src/app`
+4. Implement mobile features in `apps/mobile/app`
+
+## Type Safety
+
+This boilerplate is configured for maximum type safety:
+
+- Strict TypeScript configuration
+- tRPC for type-safe API calls
+- Shared types between packages
+- ESLint with TypeScript integration
+
+## Contributing
+
+Contributions are welcome! Please read our contributing guidelines for details.
+
+## License
+
+MIT
