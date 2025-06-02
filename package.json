@@ -1,5 +1,5 @@
 {
-  "name": "image-generator-v2",
+  "name": "boilerplate-trpc-expo-trpc",
   "private": true,
   "scripts": {
     "build": "turbo run build",

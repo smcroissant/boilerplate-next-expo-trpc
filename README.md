@@ -41,8 +41,8 @@ A modern, full-stack TypeScript monorepo boilerplate featuring Next.js 15 with A
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
-cd <repository-name>
+git clone https://github.com/monsieursam/boilerplate-next-expo-trpc.git
+cd boilerplate-next-expo-trpc
 ```
 
 2. Install dependencies:
