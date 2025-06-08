@@ -1,6 +1,6 @@
-# Next.js 15 + tRPC Monorepo Boilerplate
+# Next.js 15 + Expo 53 + tRPC Monorepo Boilerplate
 
-A modern, full-stack TypeScript monorepo boilerplate featuring Next.js 15 with App Router, tRPC for type-safe APIs, and a React Native mobile app. Built with Turborepo for efficient workspace management.
+A modern, full-stack TypeScript monorepo boilerplate featuring Next.js 15 with App Router, Expo 53 and tRPC for type-safe APIs. Built with Turborepo for efficient workspace management.
 
 ## Features
 
@@ -62,7 +62,7 @@ NEXT_PUBLIC_API_URL=http://localhost:3000
 
 **For mobile (`apps/mobile/.env`):**
 ```env
-API_URL=http://localhost:3000
+EXPO_PUBLIC_API_URL=http://localhost:3000
 # Add other mobile-specific environment variables
 ```
 
