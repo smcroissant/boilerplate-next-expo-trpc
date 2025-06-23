@@ -8,9 +8,6 @@
     "lint": "eslint . --max-warnings 0",
     "type-check": "tsc --noEmit"
   },
-  "dependencies": {
-    "zod": "^3.22.4"
-  },
   "devDependencies": {
     "@repo/eslint-config": "*",
     "@repo/typescript-config": "*",
