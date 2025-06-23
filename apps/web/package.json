@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@repo/trpc": "*",
+    "@repo/api": "*",
     "zod": "^3.22.4"
   },
   "devDependencies": {

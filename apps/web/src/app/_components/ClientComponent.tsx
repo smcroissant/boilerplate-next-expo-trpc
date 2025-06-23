@@ -1,13 +1,13 @@
 'use client';
 
-import { api } from '../../trpc/client';
+import { clientApi } from '@/trpc/client';
 
 export function ClientComponent() {
-  const { data, isLoading } = api.example.hello.useQuery({
+  const { data, isLoading } = clientApi.example.hello.useQuery({
     text: 'from Client Component',
   });
 
-  const addMutation = api.example.add.useMutation();
+  const addMutation = clientApi.example.add.useMutation();
 
   if (isLoading) return <div>Loading...</div>;
   if (!data) return <div>No data</div>;
