@@ -1,5 +1,6 @@
 import { ClientComponent } from './_components/ClientComponent';
 import { ServerComponent } from './_components/ServerComponent';
+import { WhatsappNull } from './_components/whatsapp-null';
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
       <div className="grid gap-8 md:grid-cols-2">
         <ServerComponent />
         <ClientComponent />
+        <WhatsappNull />
       </div>
     </div>
   );
