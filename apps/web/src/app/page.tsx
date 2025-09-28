@@ -1,3 +1,5 @@
+'use client';
+
 import { ClientComponent } from './_components/ClientComponent';
 import { ServerComponent } from './_components/ServerComponent';
 import { WhatsappNull } from './_components/whatsapp-null';
