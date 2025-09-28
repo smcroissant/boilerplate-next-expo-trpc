@@ -1,4 +1,3 @@
-'use client';
 
 import { ClientComponent } from './_components/ClientComponent';
 import { ServerComponent } from './_components/ServerComponent';
