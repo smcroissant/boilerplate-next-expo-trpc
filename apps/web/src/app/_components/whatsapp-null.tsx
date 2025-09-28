@@ -4,9 +4,14 @@
 import { useState } from "react"
 
 export const WhatsappNull = () => {
+
     const [messages, setMessages] = useState<string[]>([])
     const [input, setInput] = useState('')
+    function encliquant() {
+        setMessages([...messages, input])
+        setInput("")
 
+    }
 
     return (
         <div>
@@ -25,9 +30,9 @@ export const WhatsappNull = () => {
                 }}
                 value={input}
             />
-            <input type="button" onClick={() => {
-                setMessages([...messages, input])
-            }}
+            <input type="button" onClick={encliquant}
+                
+        
             value={"Envoyer"}
             />
         </div>
