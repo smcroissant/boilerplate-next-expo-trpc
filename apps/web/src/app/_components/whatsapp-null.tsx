@@ -27,7 +27,9 @@ export const WhatsappNull = () => {
             />
             <input type="button" onClick={() => {
                 setMessages([...messages, input])
-            }} />
+            }}
+            value={"Envoyer"}
+            />
         </div>
     )
 
