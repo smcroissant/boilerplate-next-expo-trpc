@@ -9,7 +9,7 @@ export const WhatsappNull = () => {
         <div>
             {
                 messages.map((message) => (
-                    <div>
+                    <div key={message}>
                         {message}
                     </div>
                 ))
