@@ -14,14 +14,17 @@ export const WhatsappNull = () => {
     }
 
     return (
-        <div>
-            {
-                messages.map((message) => (
-                    <div key={message}>
-                        {message}
-                    </div>
-                ))
-            }
+        <div className="">
+            <div className="bg-blue-100">
+                {
+                    messages.map((message) => (
+                        <div key={message}>
+                            {message}
+                        </div>
+                    ))
+                }
+            
+            </div>
 
             <input 
                 type="text"
