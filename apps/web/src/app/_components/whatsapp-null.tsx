@@ -15,10 +15,10 @@ export const WhatsappNull = () => {
 
     return (
         <div className="">
-            <div className="bg-blue-100">
+            <div className="bg-blue-100 p-2"> 
                 {
                     messages.map((message) => (
-                        <div key={message}>
+                        <div className="bg-purple-100 p-2" key={message}>
                             {message}
                         </div>
                     ))
@@ -41,4 +41,4 @@ export const WhatsappNull = () => {
         </div>
     )
 
-}
+} 
