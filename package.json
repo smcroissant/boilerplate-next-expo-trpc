@@ -28,7 +28,7 @@
     "@trpc/react-query": "^11.2.0",
     "@trpc/server": "^11.2.0",
     "@types/react": "^19",
-    "next": "15.3.3",
+    "next": "15.5.4",
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "zod": "^3.22.4"
